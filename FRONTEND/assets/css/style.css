@@ -1,0 +1,276 @@
+* {
+    font-size: 13px;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #1f130a, #000000);
+    font-family: -apple-system, sans-serif, serif;
+    display: flex;
+    margin: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+      flex-direction: column;
+    }
+}
+
+/*------------------------------------------------
+<-------------- TABLE ------------->
+-------------------------------------------------*/
+
+.users {
+    display: flex;
+    flex: 70%;
+    justify-items: center;
+    justify-content: center;
+    justify-self: center;
+    flex-wrap: wrap;
+}
+
+.table {
+    max-width: 80%;
+    overflow-x: auto;
+    margin-top: 0;
+    border: 1px solid rgba(255, 255, 255, 0.685);
+    align-self: flex-end
+}
+
+.head {
+    background-color: rgba(255, 253, 253, 0.329);
+}
+
+.head>h1,
+.head>p {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem;
+}
+
+.head>h1:hover {
+    background-color: rgba(255, 255, 255, 0.082)
+}
+
+
+th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem;
+}
+
+tr:hover,
+tr:focus {
+    background-color: rgba(255, 255, 255, 0.082)
+}
+
+.col {
+    font-size: 1.2rem;
+    padding: 0.5rem 0.7rem;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 400;
+    color: #fff;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.col:hover,
+.col:focus {
+    background-color: rgba(255, 253, 253, 0.246);
+}
+
+.col-buttons>button {
+    padding: 1rem 2.6rem;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.col-1 {
+    background-color: rgba(255, 255, 255, 0.082);
+    font-weight: 700;
+    text-align: center;
+    padding: 0rem 2rem;
+}
+
+.col-buttons {
+    background-color: rgba(255, 255, 255, 0.082);
+    text-align: center;
+}
+
+.col-buttons>button:hover,
+.col-buttons>button:focus {
+    cursor: pointer;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    border: 1px solid white;
+    color: rgb(41, 39, 39);
+}
+
+.button-delete,
+.button-cancel {
+    background-color: rgba(233, 10, 10, 0.795);
+    color: white;
+}
+
+.button-edit,
+.button-save {
+    background-color: rgba(255, 255, 255, 0.329);
+    color: white;
+}
+
+.button-save,
+.button-cancel {
+    display: none
+}
+
+/*------------------------------------------------
+<-------------- FORM ------------->
+-------------------------------------------------*/
+
+.container {
+    flex: 25%;
+    margin: 0;
+    justify-items: center;
+    justify-content: center;
+    justify-self: center;
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.form {
+    align-self: flex-start;
+    max-width: 100%;
+    top: 0;
+    border: 1px solid rgba(255, 255, 255, 0.685);
+
+}
+
+.form__sections {
+    padding: 2rem;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.form__sections>input {
+    width: 90%;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    padding: 1.2rem;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 400;
+    color: white;
+    background-color: rgba(255, 253, 253, 0.329);
+}
+
+.form__sections>input::placeholder {
+    color: rgba(255, 255, 255, 0.747)
+}
+
+.form__sections>input:hover{
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+
+.form__button {
+    text-align: center;
+    padding: 3rem
+}
+
+.form__button>button {
+    padding: 1rem 2.6rem;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.form__button>button:hover {
+    background-color: rgba(255, 253, 253, 0.329);
+    color: white;
+    cursor: pointer;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        position: static;
+        overflow: none;
+        width: 100%
+    }
+}
+
+/*------------------------------------------------
+<-------------- MESSAGES ------------->
+-------------------------------------------------*/
+
+.message {
+   background: none;
+}
+
+.message__text {
+    display: none;
+    position: relative;
+    max-width: 100%;
+    margin-top: 0;
+    border: 1px solid rgba(255, 255, 255, 0.685);
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: white;
+    text-transform: uppercase;
+    padding: 2rem 1rem;
+    animation-name: in;
+    animation-duration: 0.5s
+}
+
+@keyframes in {
+    from {left: -600px; opacity: 0}
+    to {left: 0; opacity: 1}
+  }
+
+
+.invalid {
+    color: rgba(233, 10, 10, 0.795);
+    border: thick solid rgba(233, 10, 10, 0.795);
+}
+
+.valid {
+    border: thick solid rgba(255, 255, 255, 0.842)
+}
+
+.victory {
+    color: rgba(0, 94, 0, 0.842);
+    border: thick solid rgba(0, 94, 0, 0.842);
+}
+
+.fail {
+    color: rgba(233, 10, 10, 0.795);
+    border: thick solid rgba(233, 10, 10, 0.795);
+}
+
+.message__text .fa {
+    margin-left: auto;
+}
