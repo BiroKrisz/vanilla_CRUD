@@ -39,13 +39,13 @@ function createTable(array) {
                 <td class="col" id="address_${user.id}"> ${user.address}</td>
                 <td class="col col-buttons"> 
                 <button type="button" id="editButton_${user.id}" class="button-edit" 
-                    onclick="startEditing(${user.id})"><i class="fa fa-pencil" aria-hidden="true"></i></button> 
+                    onclick="startEditing(${user.id})">Edit</button> 
                 <button type="button" id="deleteButton_${user.id}" class="button-delete" 
-                    onclick="deleteUser(${user.id});"><i class="fa fa-trash" aria-hidden="true"></i></button> 
+                    onclick="deleteUser(${user.id});">Delete</button> 
                 <button type="button" id="cancelButton_${user.id}" class="button-cancel" 
-                    onclick="back(${user.id});"><i class="fa fa-undo" aria-hidden="true"></i></button>
+                    onclick="back(${user.id});">Back</button>
                 <button type="button" id="saveButton_${user.id}" class="button-save" 
-                    onclick="updateUser(${user.id})"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
+                    onclick="updateUser(${user.id})">Save</i></button> 
                 </td>
             </tr>`
     ).join('');
